@@ -1,19 +1,15 @@
 -- +-------------------------------------------------------------------------------------------------+
 -- |  -- Script Name: pg_dbreport.sql                                                                |                                                              |
 -- |  -- Author: specter shoe                                                                        |
--- |  -- Create Date : 29 OCT 2026                                                                   |
+-- |  -- Create Date : 14 OCT 2026                                                                   |
 -- |  -- Main Changes :  Add risk and observation prompts,automatically check all databases          |
 -- |  -- version : V 1.1                                                                             |
 -- |  -- github : https://github.com/spectershoe/pg-dbreport                                         |
 -- | Modifications are also licensed under MIT-0.                                                    |
 -- +-------------------------------------------------------------------------------------------------+
--- +-------------------------------------------------------------------------------------------------+
--- |  -- Script Name: pg_collector.sql                                                               |
+-- |  -- Origin Script: pg_collector.sql  V 3.2                                                      |
 -- |  -- Author : Mohamed Ali                                                                        |
--- |  -- Create Date : 16 SEPT 2019                                                                  |
--- |  -- Description : Script to collect PostgreSQL Database Information and generate HTML Report    |
--- |  -- version : V 3.2                                                                             |
--- |  -- Changelog : https://github.com/awslabs/pg-collector/blob/main/CHANGELOG.md                  |
+-- |  -- github : https://github.com/awslabs/pg-collector                                            |
 -- | Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.                              |
 -- | SPDX-License-Identifier: MIT-0                                                                  |
 -- +-------------------------------------------------------------------------------------------------+
@@ -1287,4 +1283,4 @@ WHERE name in ('effective_io_concurrency',
 \qecho <h1>各数据库详情</h1>
 \i /tmp/pg_dbreport_loop.sql
 \o
-\echo 巡检完成，报告已生成: /tmp/pg_dbreport_:filename.html
+\echo Report Finished. file: /tmp/pg_dbreport_:filename.html

@@ -12,7 +12,7 @@
 2. 增加实例级风险告警项和实例级+库级提醒项。
 3. 原脚本部分巡检项会罗列所有行，现在大部分限制为罗列20行。
 4. 增删了部分巡检项。
-
+5. 力求所有PG版本共用一个巡检版本（本次测试环境主要是PG12）。
 
 ## 风险项（Risk Items）
 
@@ -82,7 +82,7 @@
 
 ### 1. 下载文件并解压文件。
 ```
-unzip pg_dbreport.zip
+tar -xvf pg_dbreport.tar.gz
 ```
 
 ### 2. 进入解压目录，执行脚本。
@@ -190,7 +190,7 @@ You are now connected to database "db2" as user "postgres".
 You are now connected to database "postgres" as user "postgres".
 You are now connected to database "shoedb" as user "postgres".
 You are now connected to database "tpcc" as user "postgres".
-巡检完成，报告已生成: /tmp/pg_dbreport_postgres-2026-10-14_154743.html
+Report Finished. file: /tmp/pg_dbreport_postgres-2026-10-14_154743.html
 [postgres@10-10-180-197 ~]$
 [postgres@10-10-180-197 ~]$ ls -l /tmp/pg_dbreport_postgres-2026-10-14_154743.html
 -rw-rw-r-- 1 postgres postgres 430563 Oct 14 15:47 /tmp/pg_dbreport_postgres-2026-10-14_154743.html
